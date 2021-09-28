@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfoilo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../style/style.css">
+  </head>
+  <body>
+    
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <a href="#" class="swiper-slide" style="--i:1">
+          <h2>01</h2>
+          <h3>Card One</h3>
+          <p id="intro">Introduce</p>
+          <button onclick="location.href='intro.html'"><span>Join</span></button>
+        </a>
+        <a href="#" class="swiper-slide" style="--i:2">
+          <h2>02</h2>
+          <h3>Card Two</h3>
+          <p id="back">Background Effect</p>
+          <button onclick="location.href='../background-effect/background effect.html'"><span>Join</span></button>
+        </a>
+        <a href="#" class="swiper-slide" style="--i:3">
+          <h2>03</h2>
+          <h3>Card Three</h3>
+          <p id="three">Card Effect</p>
+          <button onclick="location.href='../card-effect/card effect.html'"><span>Join</span></button>
+        </a>
+        <a href="#" class="swiper-slide" style="--i:4">
+          <h2>04</h2>
+          <h3>Card Four</h3>
+          <p id="four">3D Effect</p>
+          <button onclick="location.href='../3d-effect/3d effect.html'"><span>Join</span></button>
+        </a>
+        <a href="#" class="swiper-slide" style="--i:5">
+          <h2>05</h2>
+          <h3>Card Five</h3>
+          <p id="five">Web Site</p>
+          <button onclick="location.href='../web-site/website.html'"><span>Join</span></button>
+        </a>
+        <a href="#" class="swiper-slide" style="--i:6">
+          <h2>06</h2>
+          <h3>Card Six</h3>
+          <p id="six">Anything</p>
+          <button onclick="location.href='../anything/anything.html'"><span>Join</span></button>
+        </a>
+        <a href="#" class="swiper-slide" style="--i:7">
+          <h2>07</h2>
+          <h3>Card Seven</h3>
+          <p id="seven">Particle</p>
+          <button onclick="location.href='../particle/particle.html'"><span>Join</span></button>
+        </a>
+        <a href="#" class="swiper-slide" style="--i:8">
+          <h2>08</h2>
+          <h3>Card Eight</h3>
+          <p id="eight">Team Project</p>
+          <button onclick="location.href='../team/team-project.html'"><span>Join</span></button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 70,
+          stretch: 1,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        loop:true,
+      });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        
+        <script>
+          $(document).ready(function(){
+            $('.swiper a').click(function(){
+              if($(this).hasClass('spin')){
+                $('.swiper a').removeClass('spin');
+              }
+              else{
+                  $('.swiper a').removeClass('spin');
+                  $(this).addClass('spin');
+                }
+            });
+          });
+        </script>
+
+        <script src="main.js"></script>
+  </body>
+</html>

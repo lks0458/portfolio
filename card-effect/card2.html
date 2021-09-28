@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecard2.css">
+    <title>Card Effect2</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-logo">
+            <img src="imges/swoosh-logo-black.jpg" alt="">
+            <i class='bx bx-cart'></i>
+        </div>
+        <div class="shoes">
+            <img id="blue" class="blue active" src="imges/https___kr.hypebeast.com_files_2021_08_nike-sacai-ldwaffle-collaboration-fragment-clot-undercover-release-info-001.jpg" alt="">
+            <img id="grey" class="grey " src="imges/https___kr.hypebeast.com_files_2021_08_nike-sacai-ldwaffle-collaboration-fragment-clot-undercover-release-info-002.jpg" alt="">
+            <img id="yellow" class="yellow" src="imges/https___kr.hypebeast.com_files_2021_08_nike-sacai-ldwaffle-collaboration-fragment-clot-undercover-release-info-003.jpg" alt="">
+        </div>
+        <div class="content">
+            <p>프라그먼트 & 클롯 & 언더커버 포함, 사카이 x 나카이</p><br>
+            <p>2019년부터 매 시즌 협업 스니커를 선보이고 있는 사카이와 나이키가 새로운 협업 스니커 컬렉션을 선보인다.</p>
+        </div>
+        <div class="color">
+            <span>color:</span>
+            <span id="blue" class="circle blue active"></span>
+            <span id="grey" class="circle grey "></span>
+            <span id="yellow" class="circle yellow"></span>
+            <div class="price">
+                <p>$170.00</p>
+                <p>one hundred seventy dollar</p>
+            </div>
+        </div>
+        <div class="button">
+            <button>Add To Cart</button>
+        </div>
+    </div>
+
+    <script>
+        let circle = document.querySelector(".color");
+
+        circle.addEventListener("click", (e)=>{
+            let target = e.target;
+            if(target.classList.contains("circle")){
+                circle.querySelector(".active").classList.remove("active");
+                target.classList.add("active");   
+                document.querySelector(".shoes .active").classList.remove("active");
+                document.querySelector(`.shoes .${target.id}`).classList.add("active");
+            }
+        });
+
+
+    </script>
+</body>
+</html>

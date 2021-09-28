@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    line-height: 1.5;
+}
+
+.header{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+.container{
+    max-width: 1570px;
+    background: red;
+    margin: 20px auto;
+}
+
+.header-main{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+}
+
+.header-main .logo .logo_name p{
+    font-size : 30px;
+    margin-left: 30px;
+    color: red;
+    font-weight: 600;
+}
+
+.header-main .nav-menu{
+    width: 550px;
+    margin-right: 30px;
+}
+
+.menu.open .header-main .nav-menu{
+    display:flex;
+    flex-direction: row;
+    width: auto;
+}
+
+.header-main ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-main ul .menu-item{
+    list-style: none;
+    position: relative;
+}
+
+.header-main ul .menu-item a{
+    text-decoration: none;
+    color : black;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.header-main ul .menu-item a:hover{
+    color :rgba(0, 0, 0, 0.3);
+}
+
+.header-main ul .menu-item i{
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.header-main ul .menu-item:hover .bx-plus-medical{
+    display: none;
+}
+
+.header-main ul .menu-item .bx-minus{
+    font-size: 20px;
+    font-weight: 600;
+    display: none;
+}
+
+.header-main ul .menu-item:hover .bx-minus{
+    display: inline-flex;
+}
+
+.header-main ul .menu-item .sub_menu{
+    display: inline;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 180px;
+    height: 150px;
+    box-shadow: 5px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    background: white;
+    border-top: 3px solid red;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.header-main ul .menu-item:hover > .sub_menu{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.header-main ul .menu-item .sub_menu a{
+    margin: 20px;
+    line-height: 37px;
+}
+
+.img{
+    background: url(../imges/online-web-design.jpg);
+    background-position: center top;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.nav-menu .menu .menu_bar{
+    font-size : 30px;
+    display: none;
+}
+
+.nav-menu .menu .menu_bar i{
+    color : black;
+}
+
+
+.header .menu_bar{
+    display: none;
+    position: absolute;
+    top:37%;
+    right: 3%;
+}
+
+.header .menu_bar i{
+    font-size : 25px;
+}
+
+@media(max-width: 960px) {
+
+    .header-main .nav-menu .menu{
+        position:fixed;
+        right: 0;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background: #424242;
+        transition: all 1s ease;
+    }
+
+    .header .menu_bar .bx-x .open:active .nav-menu .menu{
+        transition: all 1s ease;
+    }
+
+    .header-main .nav-menu .menu .menu-item{
+        width: 100%;
+        max-height: 350px;
+    }
+
+    .header-main .nav-menu .menu .menu-item i{
+        display: none;
+    }
+
+    .menu ul{
+        margin: 40px 0;
+    }
+
+    .menu ul li{
+        margin: 10px 0 10px 5px;
+        
+    }
+
+    .header-main .nav-menu .menu ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-main .menu .menu-item .sub_menu{
+        position: relative;
+        background: #424242;
+        top: -30px;
+        left: -2%;
+        display: none;
+        border: none;
+        opacity: 1;
+        visibility: visible;
+        transition: all 2s ease;
+    }
+
+    .header-main .menu .menu-item .sub_menu li:nth-child(4){
+        border-bottom: 2px solid black;
+        width: 100%;
+    }
+
+    .header-main .menu .menu-item .sub_menu a{
+        border-bottom: none;
+    }
+    
+    .header-main .nav-menu .menu ul a{
+        border-bottom: 2px solid black;
+        width: 100%;
+        display: flex;
+        padding: 10px 20px;
+    }
+
+    .header .menu_bar{
+        display: inline;
+        position: absolute;
+        top:37%;
+        right: 3%;
+    }
+    
+    .header-main .nav-menu .menu{
+        display: none;
+    }
+
+    .header .menu_bar i{
+        font-size : 25px;
+        color : black;
+    }    
+
+}
+
+
+
+
+

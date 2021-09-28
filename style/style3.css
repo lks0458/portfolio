@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #161623;
+}
+
+body::before{
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#fbc2eb,#a6c1ee);
+    clip-path: circle(30% at right 70%);
+}
+
+body::after{
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 119.64% 37.72%, #ff32c7 0, #ff30cb 12.5%, #ff2ecc 25%, #f92eca 37.5%, #d92dc4 50%, #b92cbc 62.5%, #9c2cb5 75%, #7f2dae 87.5%, #642ea7 100%);
+    clip-path: circle(20% at 10% 10%);
+}
+
+.container{
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.container a{
+    display: inline;
+    width: 450px;
+    color: #333;
+    margin: 120px 10px 10px 30px;
+}
+
+.screen{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+}
+
+.screen img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+}
+
+.screen span{
+    position: absolute;
+    background: #30d0c6;
+    transition: all .3s;
+    z-index: 3;
+}
+
+.screen span:nth-child(1){
+    top:0;
+    height: 5px;
+    width: 0;
+}
+
+.screen span:nth-child(2){
+    top:0;
+    right: 0;
+    height: 0;
+    width: 5px;
+}
+
+.screen span:nth-child(3){
+    bottom:0;
+    right: 0;
+    height: 5px;
+    width: 0;
+}
+
+.screen span:nth-child(4){
+    bottom:0;
+    left: 0;
+    height: 0;
+    width: 5px;
+}
+
+.screen span:nth-child(5){
+    display: none;
+}
+
+.container a:hover .screen span:nth-child(5){
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    padding: 30px;
+}
+
+.container a:hover .screen span:nth-child(1){
+    width: 100%;
+}
+
+.container a:hover .screen span:nth-child(2){
+    height: 100%;
+    transition-delay: .3s;
+}
+
+.container a:hover .screen span:nth-child(3){
+    width: 100%;
+    transition-delay: .6s;
+}
+
+.container a:hover .screen span:nth-child(4){
+    height: 100%;
+    transition-delay: .9s;
+}
+
+i{
+    font-size: 50px;
+    color: white;
+    position:absolute;
+    top:10%;
+    right: 5%;
+
+}
+
+i:hover{
+    transform: translateY(-10px);
+}

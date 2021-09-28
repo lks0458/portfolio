@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#snow_fall{
+    width: 100%;
+    height: 100vh;
+    background: #262626 url(../imges/josh-hild-_TuI8tZHlk4-unsplash.jpg) no-repeat center;
+    background-size: cover;
+}

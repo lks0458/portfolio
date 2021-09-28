@@ -1,0 +1,71 @@
+:root {
+    --red-color: red;
+    --solid-color: #333;
+    --background-color: #1f1f1f;
+    --green-color: green;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .full {
+    background-color: grey;
+    border: 1px solid var(--solid-color);
+    padding: 5px;
+    width: 287px;
+  }
+  
+  .full form {
+    display: grid;
+    grid-template-columns: repeat(4, 65px);
+    grid-auto-rows: 65px;
+    grid-gap: 5px;
+  }
+  
+  .full form input {
+    border: 2px solid var(--solid-color);
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .full form input:hover {
+    box-shadow: 1px 1px 2px var(--solid-color);
+  }
+  
+  .full .cancel {
+    background-color: var(--red-color);
+  }
+  
+  .full .opreation {
+    background-color: orange;
+  }
+  
+  .full .dot {
+    background-color: var(--green-color);
+  }
+  
+  .full form input[type="text"] {
+    grid-column: span 4;
+    text-align: right;
+    padding: 0 10px;
+  }
+  
+  .full .cancel {
+    grid-column: span 3;
+  }
+  
+  .full .result {
+    grid-column: span 2;
+  }
+  
